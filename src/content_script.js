@@ -27,9 +27,14 @@ function replaceText(v)
     v = v.replace(/\b(M|m)ilennial(s)?\b/g, "$1illennial$2");
     v = v.replace(/\b(M|m)ilenial(s)?\b/g, "$1illennial$2");
 
+    v = v.replace(/\bmillennial(s)?\b/g, "kid$1 these days");
+    v = v.replace(/\bMillennial(s)?\b/g, "Kid$1 these days");
 
-    v = v.replace(/\bmillennial(s| generation)\b/g, "kids these days");
-    v = v.replace(/\bMillennial(s| (g|G)eneration)\b/g, "Kids these days");
+    v = v.replace(/\bMillennial (g|G)eneration\b/g, "Kids these days");
+    v = v.replace(/\bmillennial generation\b/g, "kids these days");
+
+    v = v.replace(/\b20-Something(s)?\b/g, "Kid$1 these days");
+    v = v.replace(/\b20-something(s)?\b/g, "kid$1 these days");
 
     return v;
 }
